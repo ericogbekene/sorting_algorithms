@@ -27,7 +27,7 @@
 *                numarray[j] = numarray[j - 1];
 *               numarray[j - 1] = key;
 *            }
-*            printf("n[%d] = %d, n[%d] = %d\n", j-1, numarray[j-1], j, numarray[j]);
+*  printf("n[%d] = %d, n[%d] = %d\n", j-1, numarray[j-1], j, numarray[j]);
 *            j = j - 1;
 *        }
 *    }
@@ -69,15 +69,11 @@ void insertion_sort_list(listint_t **list)
 
 			prev_node->next = current->next;
 			current->prev = prev_node->prev;
-
 			current->next = prev_node;
 			prev_node->prev = current;
-
 			prev_node = current->prev;
 			print_list(*list);
 		}
-
 		current = next_node;
 	}
 }
-
